@@ -1,0 +1,208 @@
+<style>
+    /* Main Report Card Container */
+    .report-card {
+        width: 100%;
+        max-width: 750px; /* Wax yar oo la yareeyay */
+        background: #ffffff;
+        border-radius: 15px; /* Yarayn */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Yarayn */
+        padding: 20px; /* Aad ayaa loo dhimay */
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    /* Header Section */
+    .report-header {
+        text-align: center;
+        margin-bottom: 15px; /* Aad ayaa loo dhimay */
+        padding-bottom: 10px; /* Aad ayaa loo dhimay */
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .company-name {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem; /* Aad ayaa loo dhimay */
+        font-weight: 700;
+        margin: 0;
+        color: #1a2a47;
+    }
+
+    .report-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1rem; /* Aad ayaa loo dhimay */
+        font-weight: 500;
+        color: #7f8c8d;
+        margin: 3px 0 1px; /* Aad ayaa loo dhimay */
+    }
+
+    .report-date {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8rem; /* Aad ayaa loo dhimay */
+        color: #adb5bd;
+    }
+
+    /* Body Sections */
+    .section-box {
+        margin-bottom: 15px; /* Aad ayaa loo dhimay */
+        border-left: 4px solid #2980b9; /* Yarayn */
+        padding-left: 15px; /* Aad ayaa loo dhimay */
+        position: relative;
+    }
+
+    .liabilities-section {
+        border-left-color: #e74c3c;
+    }
+
+    .equity-section {
+        border-left-color: #27ae60;
+    }
+
+    .section-heading {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1rem; /* Aad ayaa loo dhimay */
+        font-weight: 600;
+        color: #1a2a47;
+        margin-bottom: 8px; /* Aad ayaa loo dhimay */
+    }
+
+    .account-list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* Aad ayaa loo dhimay */
+    }
+
+    .account-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0; /* Aad ayaa loo dhimay */
+        border-bottom: 1px solid #f0f3f5;
+    }
+
+    .account-name {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem; /* Aad ayaa loo dhimay */
+        color: #495057;
+    }
+
+    .account-amount {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #495057;
+        font-size: 0.95rem; /* Aad ayaa loo dhimay */
+    }
+
+    /* Total Summary for each section */
+    .total-summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        padding-top: 10px; /* Aad ayaa loo dhimay */
+        border-top: 1px solid #ced4da; /* Yarayn */
+        margin-top: 10px; /* Aad ayaa loo dhimay */
+        font-size: 1rem; /* Aad ayaa loo dhimay */
+    }
+
+    .total-label {
+        color: #1a2a47;
+    }
+
+    .total-amount {
+        color: #1a2a47;
+    }
+
+    /* Grand Total Section */
+    .grand-total-section {
+        margin-top: 20px; /* Aad ayaa loo dhimay */
+        padding: 15px 0; /* Aad ayaa loo dhimay */
+        border-top: 2px solid #6c757d; /* Yarayn */
+    }
+
+    .grand-total-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem; /* Aad ayaa loo dhimay */
+        font-weight: 700;
+        color: #1a2a47;
+    }
+
+    .grand-total-amount {
+        font-size: 1.3rem; /* Aad ayaa loo dhimay */
+        color: #2980b9;
+        font-weight: 700;
+    }
+</style>
+
+<div class="report-card">
+    <header class="report-header">
+        <p class="report-title">Balance Sheet</p>
+        <p class="report-date">as of December 31, 2024</p>
+    </header>
+
+    <main class="report-body">
+        <div class="section-box assets-section">
+            <h2 class="section-heading">Assets</h2>
+            <div class="account-list">
+                <div class="account-item">
+                    <span class="account-name">Cash</span>
+                    <span class="account-amount">$6,500</span>
+                </div>
+                <div class="account-item">
+                    <span class="account-name">Accounts Receivable</span>
+                    <span class="account-amount">$0</span>
+                </div>
+            </div>
+            <div class="total-summary">
+                <span class="total-label">Total Assets</span>
+                <span class="total-amount">$6,500</span>
+            </div>
+        </div>
+
+        <div class="section-box liabilities-section">
+            <h2 class="section-heading">Liabilities</h2>
+            <div class="account-list">
+                <div class="account-item">
+                    <span class="account-name">Accounts Payable</span>
+                    <span class="account-amount">$2,000</span>
+                </div>
+                <div class="account-item">
+                    <span class="account-name">Accrued Expenses</span>
+                    <span class="account-amount">$0</span>
+                </div>
+            </div>
+            <div class="total-summary">
+                <span class="total-label">Total Liabilities</span>
+                <span class="total-amount">$2,000</span>
+            </div>
+        </div>
+
+        <div class="section-box equity-section">
+            <h2 class="section-heading">Equity</h2>
+            <div class="account-list">
+                <div class="account-item">
+                    <span class="account-name">Retained Earnings</span>
+                    <span class="account-amount">$4,500</span>
+                </div>
+                <div class="account-item">
+                    <span class="account-name">Owner's Investment</span>
+                    <span class="account-amount">$0</span>
+                </div>
+            </div>
+            <div class="total-summary">
+                <span class="total-label">Total Equity</span>
+                <span class="total-amount">$4,500</span>
+            </div>
+        </div>
+
+        <div class="grand-total-section">
+            <div class="grand-total-item">
+                <span class="grand-total-label">Total Assetes</span>
+                <span class="grand-total-amount">$4,500 + $2,000  = $6,500 </span>
+            </div>
+        </div>
+    </main>
+</div>
